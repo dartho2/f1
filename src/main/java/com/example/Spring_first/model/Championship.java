@@ -4,22 +4,30 @@ import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 
-import java.io.Serializable;
+import java.util.Set;
 
 @Entity
 @Getter
 @Setter
-@Embeddable
 public class Championship {
     @Id
-    public int id;
+    private long id;
     private int years;
-    @ManyToOne
-    @JoinColumn(name = "team_id")
-    Team team;
-    @ManyToOne
-    @JoinColumn(name = "driver_id")
-    Driver driver;
+
+    @OneToMany
+    @JoinTable(
+            name = "championships_team_driver",
+            joinColumns = @JoinColumn(name = "championship_id"),
+            inverseJoinColumns = @JoinColumn(name = "team_id"))
+    Set<Team> team;
+
+    @OneToMany
+    @JoinTable(
+            name = "championships_team_driver",
+            joinColumns = @JoinColumn(name = "championship_id"),
+            inverseJoinColumns = @JoinColumn(name = "driver_id"))
+    Set<Driver> drivers;
+
 
 
 }

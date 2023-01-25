@@ -8,4 +8,5 @@ import java.util.List;
 
 @Repository
 public interface DriverRepository extends JpaRepository<Driver,Long> {
+    Driver findByIdAndTeamIdIs(long driverId, long teamId);
 }

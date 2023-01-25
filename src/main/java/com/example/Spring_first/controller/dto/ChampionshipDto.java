@@ -7,9 +7,7 @@ import lombok.Setter;
 @Getter
 @Setter
 @Builder
-public class DriverDto {
-    private String firstName;
-    private String nameTeam;
-    private String winsTeam;
-    private String desc;
+public class ChampionshipDto {
+    private int countWin;
+
 }
