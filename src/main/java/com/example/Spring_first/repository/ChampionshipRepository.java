@@ -9,7 +9,6 @@ import java.util.List;
 @Repository
 public interface ChampionshipRepository extends JpaRepository<Championship, Long> {
     List<Championship> findAllByTeamIdIs(long id);
-
     List<Championship> findAllByDriversIdIs(long id);
     List<Championship> findAllByDriversIdAndTeamIdIs(long id,long ids);
 

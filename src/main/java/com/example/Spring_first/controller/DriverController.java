@@ -16,18 +16,18 @@ import java.util.List;
 public class DriverController {
     private final DriverSerive driverSerive;
 
-    @GetMapping("/drivers")
-    public List<Driver> getAllDriver() {
-        return driverSerive.getAllDrivers();
-    }
+//    @GetMapping("/drivers")
+//    public List<Driver> getAllDriver() {
+//        return driverSerive.getAllDrivers();
+//    }
 
-    @GetMapping("/drivers/{driverId}/team/{teamId}")
-    public Driver getDriverWithTeam(@PathVariable long driverId,@PathVariable long teamId) {
-        return driverSerive.getDriverWithTeams(driverId,teamId);
-    }
-    @GetMapping("/driver/{driverId}/team/{teamId}")
-    public DriverDto getDriver(@PathVariable long driverId,@PathVariable long teamId ) {
-        return DriverDtoMapper.mapToDriverDto(driverSerive.getDrivers(driverId), teamId);
-    }
+//    @GetMapping("/drivers/{driverId}/team/{teamId}")
+//    public Driver getDriverWithTeam(@PathVariable long driverId,@PathVariable long teamId) {
+//        return driverSerive.getDriverWithTeams(driverId,teamId);
+//    }
+//    @GetMapping("/driver/{driverId}/team/{teamId}")
+//    public DriverDto getDriver(@PathVariable long driverId,@PathVariable long teamId ) {
+//        return DriverDtoMapper.mapToDriverDto(driverSerive.getDrivers(driverId), teamId);
+//    }
 
 }
