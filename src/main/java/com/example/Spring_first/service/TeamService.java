@@ -15,4 +15,8 @@ public class TeamService {
     public Team getTeam(long idTeam) {
         return teamRepository.findById(idTeam).orElseThrow();
     }
+
+    public Object getChampionsDriverTeams(String teamName) {
+        return teamRepository.findAllTeamCountryByStringName(teamName);
+    }
 }

@@ -1,14 +1,13 @@
 package com.example.Spring_first.controller.dto;
 
-import lombok.Builder;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 
 @Getter
 @Setter
 @Builder
 public class DriverDto {
-    private String firstName;
+
+    private String firstname;
     private String nameTeam;
     private String winsTeam;
     private String desc;

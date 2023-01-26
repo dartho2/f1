@@ -1,5 +1,6 @@
 package com.example.Spring_first.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
@@ -14,6 +15,7 @@ public class Championship {
     private long id;
     private int years;
 
+    @JsonIgnore
     @OneToMany
     @JoinTable(
             name = "championships_team_driver",

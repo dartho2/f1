@@ -1,6 +1,5 @@
 package com.example.Spring_first.controller;
 
-import com.example.Spring_first.controller.dto.ChampionshipDto;
 import com.example.Spring_first.controller.dto.DriverDto;
 import com.example.Spring_first.model.Championship;
 import com.example.Spring_first.model.Driver;
@@ -23,17 +22,16 @@ public class ChampionshipController {
     private final TeamService teamService;
 
 
-    //GET ALL Champions List
     @GetMapping("/champions")
     public List<Championship> getAllChampionship() {
         return championshipService.getAllChampionships();
     }
-    //GET ALL Champions List where driverId = X and teamId = X
+
     @GetMapping("/champions/driver/{driverId}/team/{teamId}")
     public List<Championship> getChampionshipWithDriverId(@PathVariable long driverId, @PathVariable long teamId) {
         return championshipService.getChampionshipWithDriverIds(driverId, teamId);
     }
-    //GET CHAMPIONSHIP FOR ID
+
     @GetMapping("/champions/{id}")
     public Championship getChampionship(@PathVariable long id) {
         return championshipService.getChampionships(id);
@@ -48,12 +46,8 @@ public class ChampionshipController {
     public DriverDto getChampionsDriverTeam(@PathVariable long driverId, @PathVariable long teamId) {
         Driver driver = driverSerive.getDriver(driverId);      //TODO nadprogramowe zapytania
         Team team = teamService.getTeam(teamId);               //TODO nadprogramowe zapytania
-        return ChampionshipDtoMapper.mapToDriverDtoTeam(championshipService.getChampionsDriverTeams(driverId, teamId), driver, team);
+        return ChampionshipDtoMapper.mapToDriverDtoTeam(
+                championshipService.getChampionsDriverTeams(driverId, teamId)
+                , driver, team);
     }
-    @GetMapping("/team/{teamId}/country/{countryId}/champions")
-    public ChampionshipDto getChampionsCountryTeam(@PathVariable long teamId, @PathVariable long countryId) {
-        return ChampionshipDtoMapper.mapToChampionshipDto(championshipService.getChampionsCountryTeams(teamId), countryId);
-    }
-
-
 }

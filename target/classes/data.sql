@@ -9,9 +9,9 @@ values (4,'Wielka Brytania');
 insert into country(id, name)
 values (5,'Holandia');
 insert into driver(id,firstname,lastname, country_id)
-values (1,'Michael', 'Schumacher', 1);
+values (1,'MICHAEL', 'Schumacher', 1);
 insert into driver(id,firstname,lastname, country_id)
-values (2,'Fernando', 'Alonso', 2);
+values (2,'FERNANDO', 'Alonso', 2);
 insert into driver(id,firstname,lastname, country_id)
 values (3,'KIMI', 'RÄIKKÖNEN', 3);
 insert into driver(id,firstname,lastname, country_id)

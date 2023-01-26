@@ -2,6 +2,7 @@ package com.example.Spring_first.service;
 
 import com.example.Spring_first.model.Championship;
 import com.example.Spring_first.repository.ChampionshipRepository;
+import com.example.Spring_first.repository.DriverRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 

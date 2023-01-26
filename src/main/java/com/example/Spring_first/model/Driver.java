@@ -23,7 +23,7 @@ public class Driver {
             joinColumns = @JoinColumn(name = "driver_id", referencedColumnName = "id"),
             inverseJoinColumns = @JoinColumn(name = "team_id", referencedColumnName = "id"))
     Set<Team> team;
-    @ManyToOne(cascade = CascadeType.ALL)
+    @ManyToOne
     @JoinColumn(name = "country_id", referencedColumnName = "id")
     Country country;
     @JsonIgnore

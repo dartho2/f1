@@ -13,6 +13,7 @@ public class Team {
     @Id
     public long id;
     private String name;
+
     @ManyToMany(mappedBy = "team")
     Set<Driver> drivers;
 
