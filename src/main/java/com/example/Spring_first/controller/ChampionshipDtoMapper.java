@@ -22,9 +22,7 @@ public class ChampionshipDtoMapper {
                 .desc(driver.getFirstname() + " wygrał dla " + team.getName() + " " + championsDriverTeams.stream().count() + " razy")
                 .winsTeam(String.valueOf(championsDriverTeams.size())).build();
     }
-
     public static List<ChampionshipYearDto> mapToDriverDtoYear(List<Championship> sa) {
        return sa.stream().map(obsA -> new ChampionshipYearDto(String.valueOf(obsA.getYears()))).collect(Collectors.toList());
-
     }
 }
