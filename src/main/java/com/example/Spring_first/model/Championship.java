@@ -11,6 +11,35 @@ import java.util.Set;
 @Getter
 @Setter
 public class Championship {
+    public long getId() {
+        return id;
+    }
+
+    public void setId(long id) {
+        this.id = id;
+    }
+
+
+    public void setYears(int years) {
+        this.years = years;
+    }
+
+    public Set<Team> getTeam() {
+        return team;
+    }
+
+    public void setTeam(Set<Team> team) {
+        this.team = team;
+    }
+
+    public Set<Driver> getDrivers() {
+        return drivers;
+    }
+
+    public void setDrivers(Set<Driver> drivers) {
+        this.drivers = drivers;
+    }
+
     @Id
     private long id;
     private int years;

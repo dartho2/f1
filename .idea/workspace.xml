@@ -5,8 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="408c1ac9-cebe-46d6-8360-186cb85d625b" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/Spring_first/controller/ChampionshipYearDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/Spring_first/controller/ChampionshipController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/Spring_first/controller/ChampionshipController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/Spring_first/controller/ChampionshipDtoMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/Spring_first/controller/ChampionshipDtoMapper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/Spring_first/model/Championship.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/Spring_first/model/Championship.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/Spring_first/controller/ChampionshipController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/Spring_first/controller/ChampionshipController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/Spring_first/controller/ChampionshipDtoMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/Spring_first/model/Championship.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/Spring_first/model/Championship.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

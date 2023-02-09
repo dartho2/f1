@@ -12,7 +12,10 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 @RestController
 @RequiredArgsConstructor
@@ -38,8 +41,13 @@ public class ChampionshipController {
     }
 
     @GetMapping("/driver/{id_driver}/champions")
-    public List<Championship> getChampionsDriver(@PathVariable long id_driver) {
-        return championshipService.getChampionsDrivers(id_driver);
+    public List<ChampionshipYearDto> getChampionsDriver(@PathVariable long id_driver) {
+        return przer(championshipService.getChampionsDrivers(id_driver));
+    }
+
+    private List<ChampionshipYearDto> przer(List<Championship> championsDrivers) {
+        return  ChampionshipDtoMapper.mapToDriverDtoYear(championsDrivers);
+
     }
 
     @GetMapping("/driver/{driverId}/team/{teamId}/champions")

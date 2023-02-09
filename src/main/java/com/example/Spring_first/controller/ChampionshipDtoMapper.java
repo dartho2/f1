@@ -5,7 +5,9 @@ import com.example.Spring_first.model.Championship;
 import com.example.Spring_first.model.Driver;
 import com.example.Spring_first.model.Team;
 
+import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class ChampionshipDtoMapper {
     private ChampionshipDtoMapper(){}
@@ -21,4 +23,8 @@ public class ChampionshipDtoMapper {
                 .winsTeam(String.valueOf(championsDriverTeams.size())).build();
     }
 
+    public static List<ChampionshipYearDto> mapToDriverDtoYear(List<Championship> sa) {
+       return sa.stream().map(obsA -> new ChampionshipYearDto(String.valueOf(obsA.getYears()))).collect(Collectors.toList());
+
+    }
 }
