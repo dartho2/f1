@@ -13,7 +13,6 @@ public class ChampionshipYearDto {
     public String getYears() {
         return years;
     }
-
     public void setYears(String years) {
         this.years = years;
     }
